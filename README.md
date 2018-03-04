@@ -11,7 +11,7 @@ This is an open source for using vanila javscript.
 
 ### Step 1
 
-Begin by cloning this repository to your machine, and installing all Composer & NPM dependencies.
+Begin by cloning this repository to your machine, and installing all NPM dependencies.
 
 ```bash
 git clone git@github.com:AmDika/interactive-petcafe
