@@ -1,4 +1,4 @@
-# Interactive pet cafe [![Build Status](https://travis-ci.org/JeffreyWay/council.svg?branch=master)](https://travis-ci.org/JeffreyWay/council)
+# Interactive pet cafe [![Build Status](https://travis-ci.org/AmDika/interactive-petcafe.svg?branch=master)](https://travis-ci.org/AmDika/interactive-petcafe)
 
 This is an open source for using vanila javscript.
 
