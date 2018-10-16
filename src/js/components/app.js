@@ -1,9 +1,7 @@
-import { div, addId, text } from "../builders";
-import navbar from './navbar';
+import { div, addId, text } from '../builders';
 
 export default function app() {
-    const appElem = addId(div(text('Halo dunia')), 'app-container')
-    const navbar = navbar();
-
-    return appElem;
+    // const appEle = addId(div(text("hello semua")), "app-container")
+    console.log("hoy")
+    // return appEle
 }

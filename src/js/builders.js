@@ -34,10 +34,14 @@ export function span(...children) {
 }
 
 // method addClass
+
 export function addClass(element, ...klasses) {
-    const newElement = element.cloneNode(true);
-    klasses.forEach(klass => { newElement.classList.add(klass) });
-    return newElement;
+    console.log(element, "ada ga")
+
+    const newDom = element.cloneNode(true);
+    console.log(newDom, 'checking aja')
+    // klasses.forEach(klass => newDom.classList.add(klass));
+    return newDom;
 }
 
 // method for addId
