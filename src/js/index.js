@@ -1,36 +1,41 @@
-// import { app } from './components/App';
-import { div, addId, text, addClass, i, nav, span } from './builders';
-// import navbar from './components/navbar';
+import app from './components/app';
+import { createStore } from './state';
+import setupListeners from './setup_listeners';
 
-const body = document.querySelector('body');
-
-function navbar() {
-    console.log(div, "checking div element")
-
-    const navLeft = addClass(div, 'navbar-left');
-
-    console.log(navLeft, "checking navLeft");
-
-    const cartIcon = addId(addClass(i(), 'fa', 'fa-shopping-cart'), 'cart-icon');
-    const cartItems = addClass(span(), 'cart-items');
-    const navbarItem = addClass(div(cartIcon, cartItems), 'navbar-items');
-    const navRight = addClass(div(navbarItem), 'navbar-right', 'cart');
-
-    return addClass(nav(navLeft, navRight), 'navbar');
+function reducer(state, event, data) {
+  switch (event) {
+    case 'SET_ITEMS':
+      return Object.assign({}, state, {
+        items: data.items.reduce((total, item) =>
+          Object.assign({}, total, { [item.id]: item })
+          , {}),
+      });
+    case 'ITEM_ADDED':
+      return Object.assign({}, state, {
+        cart: (new Set(state.cart)).add(data.item),
+      });
+    case 'ITEM_REMOVED':
+      const newCart = (new Set(state.cart));
+      newCart.delete(data.item);
+      return Object.assign({}, state, {
+        cart: newCart,
+      });
+    case 'TOGGLE_SHOW_CART':
+      return Object.assign({}, state, {
+        cartVisible: !state.cartVisible,
+      });
+    default:
+      return state;
+  }
 }
 
-export default function app() {
-    console.log(div, "test")
-    const navbarEle = navbar();
-    console.log(navbar)
-    const appEle = addId(div(navbarEle), "app-container")
-    return appEle
-}
+const store = createStore(reducer);
 
-body.insertBefore(app(), body.childNodes[0])
-
-
-// const lower = ["hey1", "hey2", "hey3"]
-// const upper = lower.map(name => name.toUpperCase())
-
-// upper.forEach(name => console.log(`Hello, ${name}`))
+fetch('food.json')
+  .then(res => res.json())
+  .then(resBody => {
+    const body = document.querySelector('body');
+    body.insertBefore(app(store), body.childNodes[0]);
+    store.trigger('SET_ITEMS', { items: resBody });
+    setupListeners(store);
+  });

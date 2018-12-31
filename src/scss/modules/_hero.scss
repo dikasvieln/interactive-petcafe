@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: stretch;
     height: 70vh;
-    background: url('http://unsplash.it/1600/900/?image=876') no-repeat;
+    // background: url('http://unsplash.it/1600/900/?image=876') no-repeat;
+    background: url(images/bg-images_01.jpg) no-repeat;
     background-size: cover;
     @media(max-width: 720px) {
         height: 50vh;

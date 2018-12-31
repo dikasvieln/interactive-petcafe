@@ -29,7 +29,7 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
     "lite-server": "^2.1.0",
-    "node-sass": "^4.9.4",
+    "node-sass": "^3.4.2",
     "watchify": "^3.7.0"
   }
 }
