@@ -22,3 +22,9 @@ npm run server
 ### Step 2
 
 Next, boot up a server and visit your app.
+
+
+### Notes
+* having some bug issues on node-sass compiler.
+* will remain development phase.
+* use it wisely for learning purpose.
