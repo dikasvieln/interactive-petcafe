@@ -28,3 +28,6 @@ Next, boot up a server and visit your app.
 * having some bug issues on node-sass compiler.
 * will remain development phase.
 * use it wisely for learning purpose.
+
+## Credits To
+Scotch.io article [![Alex Sears](https://scotch.io/courses/build-an-interactive-javascript-food-menu)]
