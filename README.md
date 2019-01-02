@@ -30,4 +30,4 @@ Next, boot up a server and visit your app.
 * use it wisely for learning purpose.
 
 ## Credits To
-Scotch.io article [![Alex Sears](https://scotch.io/courses/build-an-interactive-javascript-food-menu)]
+Scotch.io article [Alex Sears](https://scotch.io/courses/build-an-interactive-javascript-food-menu)
