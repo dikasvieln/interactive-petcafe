@@ -2,14 +2,14 @@
   {
       "id": 1,
       "type": "appetizer",
-      "name": "Fried Asparagus",
+      "name": "Whiskas Asparagus",
       "price": "4.50",
       "description": "Fresh asparagus lightly battered and quick-fried. Topped with crumbled queso fresco, chopped cilantro & a drizzle of chimichurri sauce. Served with roasted garlic aioli."
   },
   {
       "id": 2,
       "type": "appetizer",
-      "name": "Loaded Boneless Wings",
+      "name": "Loaded Bone Wings",
       "price": "6.75",
       "description": "Boneless wings smothered in white queso, 3-cheese blend, applewood smoked bacon & chopped green onions. Served with a side of house-made ranch."
   },
